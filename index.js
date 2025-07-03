@@ -28,3 +28,12 @@ function start() {
       })
 }
 start()
+
+// Ajoutez en haut avec les autres requires
++ const messageHandler = require('./handlers/message');
+
+// Modifiez (ou ajoutez) le listener des messages :
+client.on('message', async (message) => {
+-  // Ancien code existant (ne pas supprimer !)
++  await messageHandler(message, client); // Nouveau handler
+});
