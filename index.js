@@ -2,6 +2,9 @@
 const {
    spawn
 } = require('child_process')
+COUPE_FACILE_USERNAME: 'votre_username',
+COUPE_FACILE_PASSWORD: 'votre_password',
+TOURNAMENT_ID: 'votre_tournament_id'
 const path = require('path')
 function start() {
    let args = [path.join(__dirname, 'main.js'), ...process.argv.slice(2)]
@@ -17,9 +20,6 @@ function start() {
             delete p
          }
       })
-      COUPE_FACILE_USERNAME: 'votre_username',
-      COUPE_FACILE_PASSWORD: 'votre_password',
-      TOURNAMENT_ID: 'votre_tournament_id'
       .on('exit', code => {
          console.error('Exited with code:', code)
          if (code == '.' || code == 1 || code == 0) start()
