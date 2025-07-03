@@ -1,9 +1,4 @@
-//base by HANSTZ
-//YouTube: @HANSTZ-TECH
-//Whatsapp https://wa.me/255756530143
-//GitHub: @Mrhanstz
-//WhatsApp: https://whatsapp.com/channel/0029VasiOoR3bbUw5aV4qB31
-//want more free bot scripts? follow my channel : https://whatsapp.com/channel/0029VasiOoR3bbUw5aV4qB31
+//base by greatgenie 
 const {
    spawn
 } = require('child_process')
@@ -22,6 +17,9 @@ function start() {
             delete p
          }
       })
+      COUPE_FACILE_USERNAME: 'votre_username',
+      COUPE_FACILE_PASSWORD: 'votre_password',
+      TOURNAMENT_ID: 'votre_tournament_id'
       .on('exit', code => {
          console.error('Exited with code:', code)
          if (code == '.' || code == 1 || code == 0) start()
