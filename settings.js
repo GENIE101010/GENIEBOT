@@ -77,3 +77,11 @@ fs.watchFile(file, () => {
     delete require.cache[file]
     require(file)
 })
+
+module.exports = {
+  // ... existant ...
++ COUPE_FACILE_URL: 'https://coupefacile.com',
++ CHROMIUM_PATH: '/usr/bin/chromium-browser', // Pour Docker
++ TESSERACT_LANG: 'fra'
+};
+
